@@ -1,0 +1,102 @@
+section
+{
+ background-color: #lightgray;
+}
+
+.center-wrapper {
+  text-align: center;
+  margin: 0 auto;
+}
+.center-wrapper * {
+  margin: 0 auto;
+  height: 100%;
+}
+
+footer h4
+{
+ font-size: 8pt; 
+ padding-left: 3px;
+ display: block;
+ text-align: center;
+}
+
+section h4
+{
+ text-align: center;
+ text-decoration: underline;
+ margin: 0;
+ padding: 0;
+}
+
+.smallMap
+{
+    height: 250px;
+    width: 100%;
+    margin-top: 10px;  
+	display: none;
+}
+
+.bigMap
+{
+    height: 300px;
+    width: 100%;
+    margin-top: 10px;  
+}
+
+.mapClass
+{
+    border: 2px solid purple;
+    background-color: Gray;
+    box-shadow: 3px 3px 3px #000000;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.tableClass
+{
+    margin-top: 2px;
+    border-collapse:collapse;
+    background-color: White;
+    box-shadow: 2px 2px 2px #000000;
+    border-radius: 5px;
+    display: none;
+    font-size: 9pt;
+    width: 100%;
+    border: 2px solid purple;
+}
+
+.tableClass th
+{
+    height: 10px;
+}
+
+.tableClass td
+{
+    text-align: center;
+    padding: 2px;
+    cursor: pointer; cursor: hand; 
+}
+
+.highlighted
+{
+    background-color: yellow;
+}
+
+.lowBikes, .lowDocks
+{
+    color: Red;
+    font-weight: bold;
+}
+
+.chooseHubDiv
+{
+    display: none;
+}
+
+.errorMessage
+{
+    color: red;
+    font-size: 9pt;
+    margin-bottom: 5px;
+	margin-top: 5px;
+}

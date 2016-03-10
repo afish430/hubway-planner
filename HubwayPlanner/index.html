@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="description" content="Hubway Planner - Plan Your Hubway Route" />
+        <meta name="author" content="Arthur Fisher" />
+        <title>Hubway Planner - Plan Your Hubway Route</title>
+        <link rel="Stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false&v=3&libraries=geometry"></script>
+     	<script type="text/JavaScript" src="scripts/projectScripts.js"></script>
+        <link rel="Stylesheet" href="styles/main.css"/>
+    </head>
+    
+    <body>
+
+        <header>
+
+            <div id="canvasDiv">
+                <canvas id="headerCanvas" width = "1000" height= "175"></canvas>
+            </div>
+           
+        </header>
+        
+        <section>
+
+            <!--MAPS-->
+            <div id="mapsDiv">
+
+                <!--START MAP-->
+                <div class="mapClass smallMap" id= "startMap">              
+                </div>
+
+                <div id="startDialog" class="dialogClass" title="Enter Start Address">
+                    Find closest &nbsp;<input id="numStarts" type="number" value="4" min="1" max="10"/>&nbsp; Hubway stations to:<br /><br />
+                    <input id="startAddress"/>
+                    <button id="btnFindStart"><b>Go</b></button><br /><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or <button id="btnUseCurrent">Use Current Location</button>
+               </div>
+
+               <!--END MAP-->
+                <div class="mapClass smallMap" id= "endMap">   
+                </div>
+
+               <div id="endDialog" class="dialogClass" title="Enter End Address">
+                    Find closest &nbsp;<input id="numEnds" type="number" value="4" min="1" max="10"/>&nbsp; Hubway stations to:<br /><br />
+                    <input id="endAddress"/>
+                    <button id="btnFindEnd"><b>Go</b></button>
+               </div>
+                
+                <!--FINAL MAP-->
+                <div class="mapClass bigMap" id= "finalMap">
+                </div>
+
+               <!--INSTRUCTION DIVS-->
+               <div class="chooseHubDiv" id="chooseStation1">
+                    <label>Choose a Starting Station:</label>
+               </div>
+
+               <div class="chooseHubDiv" id="chooseStation2">
+                     <label>Choose Destination Station:</label>
+               </div>
+
+                <!--DIRECTIONS DIV-->
+                <div id="directionsDiv">
+                    <h3>Directions:</h3>                    
+                </div>
+
+            </div> <!--end mapsDiv-->
+
+            <!--TABLES-->
+            <div id="tablesDiv">
+                <!--START STATIONS TABLE-->
+                <table class="tableClass smallTable" id="startTable">
+                    <tr class="headerRow"><th>ID</th><th>Name</th><th>Distance</th><th>Bikes</th></tr>
+                </table>
+
+                <!--END STATIONS TABLE-->
+                <table class="tableClass smallTable" id="endTable">
+                    <tr class="headerRow"><th>ID</th><th>Name</th><th>Distance</th><th>Docks</th></tr>
+                </table>
+
+            </div> <!--end tablesDiv-->
+
+            <button id="btnReset" class="bigButton">START OVER</button>
+            <div id="errorMessage">
+                <span id="errorSpan"></span><span id="lowBikesSpan"></span><span id="lowDocksSpan"></span>
+            </div>
+            <button id="btnPlanRoute" class="bigButton" disabled>PLAN ROUTE</button>
+            <button id="btnPrint" class="bigButton" onclick="printDirections()">PRINT</button>
+
+        </section>
+
+    <footer>
+     <div class="bottomText">
+        <p>Hubway Planner uses a live XML feed provided by <a target="blank" href="http://www.thehubway.com/">Hubway</a>. A <a target="blank" href="mobile/index.html">Mobile Version</a> is also available. Hubway Planner was developed independently by <a target="blank" href="http://www.mygreencanton.net/single_pages/author.html">Arthur Fisher</a> and is not affiliated with Hubway or the City of Boston. For questions or comments, please contact the <a href="mailto: afish430@gmail.com">site administrator</a>. </p>
+     </div>
+    </footer>
+        
+    </body>
+</html>

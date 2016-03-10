@@ -1,0 +1,354 @@
+
+html
+{
+ background-color: #6699CC;
+ background-image: -moz-linear-gradient(top, white 0%, #0055FF 100%);
+ background-image: -webkit-linear-gradient(top, white 0%, #0055FF 100%);
+ background-image: -o-linear-gradient(top, white 0%, #0055FF 100%);
+ background-image: linear-gradient(top, white 0%, #0055FF 100%);
+ height: 100%;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+*
+{
+ font-family: Arial, Sans-Serif;
+}
+
+body{
+ font-size: 87.5%;
+ height: 100%;
+ margin: 0 auto;
+ padding-bottom: 30px;
+ height: 560px;
+}
+
+section{
+    width: 1000px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+a:hover{
+    color: orange;
+}
+
+header h1{
+  text-align: center;
+  font-size: 3.25em;
+  color: purple;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 5px grey;
+  clear: both;
+}
+
+h2{
+  font-size: 1.25em;
+  text-align: left;
+  color: purple;
+  margin-bottom: 0.5em;
+}
+
+h3{
+  font-size: 1em;
+  margin-top: 1em;
+  text-align: center;
+  color: purple;
+}
+
+#canvasDiv
+{
+    width: 1000px;
+    height: 175px;
+    margin: auto;
+    border: 1px solid;
+    font-size: 50pt;
+}
+
+footer
+{
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-top: 100px;
+    float: left;
+}
+
+.bottomText
+{
+    color: White;
+    font-size: 9pt;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bottomText a
+{
+    color: yellow;
+}
+
+
+/*MAPS*/
+
+#mapsDiv
+{
+    width: 1000px;
+    height: 410px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.mapClass
+{
+    border: 3px solid purple;
+    height: 100%;
+    background-color: Gray;
+    box-shadow: 5px 5px 5px #000000;
+    border-radius: 5px;
+}
+
+#startMap
+{
+    margin-left: 30px;
+}
+
+.smallMap
+{
+    margin: 0 10px 0 15px;
+    width: 450px;
+    float: left;
+}
+
+.bigMap
+{
+    margin: 10px 10px;
+    width: 625px;
+    height: 525px;
+    clear: both; 
+    display: none; 
+    float: left;
+}
+
+/*TABLES*/
+
+#tablesDiv
+{
+    margin: 20px auto;
+}
+
+.tableClass
+{
+    margin-top: 20px;
+    border-collapse:collapse;
+    background-color: White;
+    box-shadow: 5px 5px 5px #000000;
+    border-radius: 5px;
+    display: none;
+    font-size: 9pt;
+}
+
+.tableClass th
+{
+    height: 10px;
+}
+
+.tableClass td
+{
+    text-align: center;
+    padding: 4px;
+    cursor: pointer; cursor: hand; 
+}
+
+
+.highlighted
+{
+    background-color: yellow;
+}
+
+.lowBikes, .lowDocks
+{
+    color: Red;
+    font-weight: bold;
+}
+
+#startTable
+{
+    margin-left:30px;  
+}
+
+#endTable
+{
+    margin-right:34px;  
+    float: right;
+}
+
+.smallTable
+{
+    margin: 0 10px 0 10px;
+    width: 454px;
+    float: left;
+}
+
+#directionsDiv
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 310px;
+    display: none; 
+    float: right;
+    margin-top: 10px;
+    background-color: White;
+    box-shadow: 5px 5px 5px #000000;
+    border-radius: 5px;
+    border: 3px solid purple;
+    font-size: 8pt;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+#directionsDiv h3
+{
+    font-size: 12pt;
+}
+
+/*BUTTONS & LABEL*/
+
+.bigButton
+{
+    margin: 5px auto 20px;
+    width: 200px;
+    height: 40px;
+    font: bold 18pt Arial;
+    display: block;
+    color: #222222;
+}
+
+#btnPlanRoute
+{
+    display: block;
+    float: right;
+    margin-right: 55px;
+    margin-top: 10px;
+}
+
+button:disabled
+{
+    color: Gray;
+}
+
+#btnReset
+{
+    clear: both;
+    float: left;
+    display: block;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 160px;
+    font-size: 15pt;
+}
+
+#btnPrint
+{
+    visibility: hidden;
+    display: block;
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+#errorMessage
+{
+    float: left;
+    display: block;
+    margin-left: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 11pt;
+    width: 465px;
+    text-shadow: 2px 2px 2px #ff0000;
+    margin-top: 12px;
+}
+
+/*DIALOGS*/
+
+.ui-dialog
+{
+    box-shadow: 5px 5px 5px #000000;
+}
+
+.ui-dialog .ui-dialog-content
+{
+    font-size: 11pt;
+}
+
+.ui-dialog .ui-dialog-content input
+{
+    width: 220px;
+    margin-bottom: 0;
+    font-size: 9pt;
+}
+
+#numStarts, #numEnds
+{
+    width: 37px;   
+}
+
+.ui-dialog .ui-dialog-titlebar
+{
+    font-size: 11pt;
+    text-align: center;
+}
+
+.ui-dialog .ui-dialog-title
+{
+    float: none;  
+}
+
+.ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+
+
+/*INSTRUCTION DIVS*/
+
+.chooseHubDiv
+{
+    box-shadow: 5px 5px 5px #000000;
+    border-radius: 5px;
+    background-color: White;
+    font-size: 11pt;
+    display: none;
+    border: 2px solid purple;
+    width: 205px;
+    height: 25px;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+}
+
+.chooseHubDiv label
+{
+    height: 25px; line-height: 25px; padding: 0;
+    font-weight: bold;
+    color: purple;
+}
+
+#chooseStation1
+{
+    left: 145px;
+    top: 7px;
+}
+
+#chooseStation2
+{
+    right: 170px;
+    top: 7px;
+}
+
+
+
+
+
+
